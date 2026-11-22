@@ -119,8 +119,6 @@ touch readme.txt         # create the file
 
 ## Part 11: Full workflow practice
 
-⚠️ **Before deleting, save `install.sh` somewhere** (I need it in step 8):
-
 ```bash
 cp my-first-repo/install.sh ~/install.sh
 ```
@@ -186,30 +184,3 @@ git push -u origin main
 6. **Purpose of branches?** To work on something separately (a feature, a fix, an experiment) without touching the stable code on `main`, and merge it only when it's ready.
 7. **When to create a branch instead of working on main?** For any new feature, a bug fix, or a risky test, especially when working with other people or when `main` must always stay working.
 
----
-
-## Files to create in the new repo (`bash-installer`)
-
-| File | Created where / when | Content |
-|---|---|---|
-| `README.md` | on `main`, first commit (Part 11, step 5) | Title + one or two sentences on what the project is |
-| `install.sh` | on `feature-install`, then merged into `main` (steps 8-9) | The install script from Part 7 (shebang, "Starting installation...", `apt-get update`, install one package, "Installation complete!") |
-
-Optional, nice to have in the same repo (not required by the exercise):
-
-| File | Why |
-|---|---|
-| `env_install.sh` | The script from the shell exercise (slide 18), to deliver it at the same time |
-| `git_exo.md` | This answer document |
-| `.gitignore` | So I never commit junk or secrets by accident (`.env`, `__pycache__/`, `node_modules/`) |
-
-**Final structure:**
-
-```
-bash-installer/
-├── README.md
-├── install.sh
-├── env_install.sh   (optional)
-├── git_exo.md       (optional)
-└── .gitignore       (optional)
-```
